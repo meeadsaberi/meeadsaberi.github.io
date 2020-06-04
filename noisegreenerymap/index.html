@@ -1,0 +1,238 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="description" content="Mapping Urban Greenery and Traffic Noise of Sydney" />
+    <meta name="keywords" content="UNSW, CityX Lab, Sydney, Noise, Greenery">
+    <meta name="author" content="">
+
+    <title>Sydney Traffic Noise and Urban Greenery Maps</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Retina.js - Load first for faster HQ mobile images. -->
+    <script src="js/plugins/retina/retina.min.js"></script>
+
+    <!-- Font Awesome -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Default Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,600,500,700,800,900' rel='stylesheet' type='text/css'>
+
+    <!-- Modern Style Fonts (Include these is you are using body.modern!) -->
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Cardo:400,400italic,700' rel='stylesheet' type='text/css'>
+
+    <!-- Vintage Style Fonts (Include these if you are using body.vintage!) -->
+    <link href='http://fonts.googleapis.com/css?family=Sanchez:400italic,400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Cardo:400,400italic,700' rel='stylesheet' type='text/css'>
+
+    <!-- Plugin CSS -->
+    <link href="css/plugins/owl-carousel/owl.carousel.css" rel="stylesheet" type="text/css">
+    <link href="css/plugins/owl-carousel/owl.theme.css" rel="stylesheet" type="text/css">
+    <link href="css/plugins/owl-carousel/owl.transitions.css" rel="stylesheet" type="text/css">
+    <link href="css/plugins/magnific-popup.css" rel="stylesheet" type="text/css">
+    <link href="css/plugins/jquery.fs.wallpaper.css" rel="stylesheet" type="text/css">
+    <link href="css/plugins/animate.css" rel="stylesheet" type="text/css">
+
+    <link id="changeable-colors" rel="stylesheet" href="css/template.css">
+    <link href="demo/style-switcher.css" rel="stylesheet">
+
+
+
+
+
+</head>
+
+<!-- Google Analytics Code
+-->
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-45941392-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<style>
+
+ .legendbox {
+  position: absolute;
+  right: 4%;
+  z-index: 1000;
+  }
+
+</style>
+<body id="page-top">
+
+    <!-- Navigation -->
+    <!-- Note: navbar-default and navbar-inverse are both supported with this theme. -->
+    <nav class="navbar navbar-inverse navbar-fixed-top navbar-expanded">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">
+                    <img src="img/creative/logo2.png" class="img-responsive" style="width: 370px;" alt="">
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a class="page-scroll" href="#page-top"></a>
+                    </li>
+                    
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+   <header style="background-image: url('img/alexander-pidgeon-XA2OEcvrrP8-unsplash.jpg');">
+
+        <div class="intro-content">
+            <!-- <i class="fa fa-university fa-5x" style="font-size: 12em;"></i> -->
+<br>
+            <div class="brand-name">Sydney Traffic Noise and Urban Greenery Maps</div>
+<p>
+    <br>
+    <br>
+                        Supported by City of Sydney’s Environmental Performance Innovation Grant 2019-20
+                        <br>
+                        Developed by CityX Lab @UNSW Research Centre for Integrated Transport Innovation (rCITI)
+                    </p>
+
+
+            <!--
+            <hr class="colored">
+            <div class="brand-name-subtext">Text here Text here Text here Text here</div>
+            -->
+        </div>
+        <div class="scroll-down">
+            <a class="btn page-scroll" href="#about"><i class="fa fa-angle-down"></i></a>
+        </div>
+    </header>
+
+    <section id="about" class="bg-gray" style="padding-top: 25px;">
+        <div class="container wow fadeIn" style="width:95%">
+            <div class="row text-center">
+                <div class="col-lg-12 wow fadeIn">
+                    <h2>About </h2>
+                    <br>
+                    <p style="text-align: justify;padding-left:10%;padding-right:10%">
+                         The project aims to map urban greenery and traffic noise in the Sydney CBD. City of Sydney has always been the main economic and activity centre of the larger Sydney metropolitan area. Walking accounts for 92% of trips in the city centre. Walkability measurements help better understand and improve the environmental performance of the city. Creating a more attractive walking environment facilitates a greater mode shift to active transport. Two key aspects, among many others, that determine the walkability in the CBD area are urban greenery and traffic noise. Funded by a City of Sydney's Environmental Performance Innovation Grant (2019-2020), in this project we explore how we can use emerging data sources including crowd-sourced mobile phone based data and Google Street View images to estimate traffic noise levels and measure the green canopy by analysing the amount of green perceived at the street level.
+
+                    </p>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="noise" style="padding-top: 25px;">
+        <div class="container wow fadeIn" style="width:95%">
+            <div class="row text-center">
+                <div class="col-lg-12 wow fadeIn">
+                    <h2>Traffic Noise Map</h2>
+                    <!-- <hr class="colored"> -->
+                    <br>
+                    <p style="text-align: justify;padding-left:10%;padding-right:10%">
+                        Noise, defined as "unwanted sound", is perceived as an environmental stressor and nuisance that affects social behaviour and is <a href="https://doi.org/10.1093/bmb/ldg033" rel="nofollow">shown</a> to be associated with hypertension, cardiovascular diseases and psychological symptoms.
+
+                        To estimate traffic noise levels in City of Sydney, we used NoiseModelling that is a plugin of the <a href="http://www.orbisgis.org" rel="nofollow">OrbisGIS</a>, an open-source GIS software, that enables the production of urban noise maps based on the French standard method for the road noise <a href="https://www.researchgate.net/profile/Guillaume_Dutilleux/publication/273383895_Road_noise_prediction_-_1_Calculating_sound_emissions_from_road_traffic/links/550012250cf28e4ac3478a33/Road-noise-prediction-1-Calculating-sound-emissions-from-road-traffic.pdf" title="Road noise prediction. Part 1 - Calculating sound emissions from road traffic, SETRA (2009)" rel="nofollow">emission</a> and using the <a href="https://www.researchgate.net/publication/263920715_Road_noise_prediction_2_-_Noise_propagation_computation_method_inclu_ding_meteorological_effects_NMPB_2008" title="Road noise prediction. Part 2 - Noise propagation computation method including meteorological effects (NMPB 2008), SETRA (2009)" rel="nofollow">NMPB</a> method for the sound propagation. A key input to the traffic noise model is the average traffic volumes and speeds across the study area. Thanks to the generous support of the <a href="https://veitchlister.com.au/" rel="nofollow">Veitch Lister Consulting</a>, we obtained traffic volumes across Sydney CBD at three time intervals including the morning peak 7-9am, the afternoon peak 4-6pm and off-peak period 9am-4pm and 6pm-7am. To validate the noise model outcomes, we collected observational data with <a href="https://play.google.com/store/apps/details?id=org.noise_planet.noisecapture&hl=en_AU" rel="nofollow">NoiseCapture</a> that is a free crowd-sourced based Android mobile phone application. The application collects envrionment noise level and uses GPS to locate the receiver position. A RISEPRO® digital noise level meter (30 – 130 dB +/-1.5 dB) with frequency range from 31.5 to 4Khz was also used to calibrate and adjust the mobile phone based noise measurements. The resulting maps show a clear 
+
+                    </p>
+                    <br>
+                </div>
+            </div>
+            <div class="row content-row">
+                 <object type="text/html" data="noise/map_noise.html" style="height:65vh;width:100%;"></object>
+            </div>
+        </div>
+    </section>
+
+    <section id="greenery" class="bg-gray" style="padding-top: 25px;">
+        <div class="container wow fadeIn" style="width:95%">
+            <div class="row text-center">
+                <div class="col-lg-12 wow fadeIn">
+                    <h2>Urban Greenery Map</h2>
+                    <br>
+                    <p style="text-align: justify;padding-left:10%;padding-right:10%">
+                        The growing global awareness of the climate change and rapid urbanisation has put 
+<a href="https://climatechange.environment.nsw.gov.au/Impacts-of-climate-change/Heat/Urban-heat" rel="nofollow">urban heat</a> and 
+<a href="https://www.cityofsydney.nsw.gov.au/__data/assets/pdf_file/0003/132249/Urban-Forest-Strategy-Adopted-Feb-2013.pdf" rel="nofollow">urban forests</a>
+at the centre of many discussions on <a href="https://www.planning.org.au/policy/climate-change-0510" rel="nofollow">urban planning of future</a>. Urban greenery improves the comfort and amenity as tree canopies provide shade for pedestrians, cyclists and reduce traffic noise.
+To estimate the street level greenery in City of Sydney, we used <a href="https://github.com/mittrees/Treepedia_Public" rel="nofollow">Treepedia</a>, an open source tool developed by 
+<a href="https://senseable.mit.edu/" rel="nofollow">MIT Senseable City Lab</a> that uses Google Street View (GSV) panoramas. Urban green canopy is measured by the Green View Index (GVI) on a scale of 0-100, representing the percentage of canopy coverage of any location from different vertical view angles (-45, 0 and 45 degree) and during different seasons (winter and summer).
+
+                    </p>
+                    <br>
+                </div>
+            </div>
+            <div class="row content-row">
+              <div class="row content-row">
+                 <object type="text/html" data="greenery/map_greenery.html" style="height:65vh;width:100%;"></object>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section style="padding-top: 25px;background-color: black;color: white;padding-bottom: 10px;">
+
+        <div >
+            <p class="text-center" style="font-size: 14px;">Developed by CityX Lab at University of New South Wales</p>
+        </div>
+
+    </section>
+
+
+    <!-- Core Scripts -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+
+    <!-- Plugin Scripts -->
+    <script src="js/plugins/jquery.easing.min.js"></script>
+    <script src="js/plugins/classie.js"></script>
+    <script src="js/plugins/cbpAnimatedHeader.js"></script>
+    <script src="js/plugins/owl-carousel/owl.carousel.js"></script>
+    <script src="js/plugins/jquery.magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="js/plugins/jquery.fs.wallpaper.js"></script>
+    <script src="js/plugins/jquery.mixitup.js"></script>
+    <script src="js/plugins/wow/wow.min.js"></script>
+    <script src="js/plugins/jqBootstrapValidation.js"></script>
+    <script src="js/template.js"></script>
+
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>
+    <script src="http://d3js.org/topojson.v1.min.js"></script>
+    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="js/jquery.ui.touch-punch.min.js"></script>
+    <script type="text/javascript" src="js/jquery.beforeafter-map-0.11.js"></script>
+
+   
+    <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.4/mapbox.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.4/mapbox.css' rel='stylesheet' />
+
+</body>
+
+</html>
